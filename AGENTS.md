@@ -8,8 +8,9 @@ This repository maintains reusable AI/Codex skills for engineering task manageme
 
 - Write all skill content descriptions in English, including `description`, `short_description`, marketplace summaries, trigger descriptions, and any other short text whose purpose is to describe when or why a skill should be used.
 - Match the user's requested language for all assistant replies, specs, plans, task cards, reviews, generated docs, and other user-facing output.
-- If the user's request is in English, reply and write generated artifacts in English.
-- If the user's request is in Chinese or another language, reply and write generated artifacts in that same language.
+- Whatever user's request language, and write generated artifacts in English.
+- If the user's request is in English, reply in English.
+- If the user's request is in Chinese or another language, reply in that same language.
 - If the user explicitly asks for a language, or the surrounding context specifies one, that explicit language requirement overrides automatic language matching.
 - Keep code identifiers, file paths, CLI commands, API names, and established technical terms in their original form unless the user asks otherwise.
 - Do not add skill instructions that hard-code a default response language such as “Chinese first” or “English only”; use this policy instead.
