@@ -2,9 +2,10 @@
 
 [English](README.md) | 中文
 
-这是一个面向用户的 skills 仓库，当前包含三类常用能力：
+这是一个面向用户的 skills 仓库，当前包含四类常用能力：
 
-- 把模糊的研发目标写成可以执行、可以追踪、可以验收的计划和任务系统
+- 把 Spec 转成实施策略、阶段顺序和 rollout 路径
+- 把 Plan 转成可以执行、可以追踪、可以验收的 Task 系统
 - 为 `egui` / `eframe` 应用添加截图能力、截图测试和图片导出流程
 - 为 AI Coding 项目维护 Snapshot + Patch 的 Spec source of truth
 
@@ -20,7 +21,8 @@ npx skills add https://github.com/aiomni/omni-skills --skill egui-screenshot
 
 本仓库当前提供的 skill 名称：
 
-- `writing-plans`
+- `writing-plan`
+- `writing-tasks`
 - `egui-screenshot`
 - `writing-spec`
 
@@ -39,20 +41,38 @@ bash scripts/install-skills.sh
 
 ```bash
 REPO="https://github.com/aiomni/omni-skills"
-for skill in writing-plans egui-screenshot writing-spec; do
+for skill in writing-plan writing-tasks egui-screenshot writing-spec; do
   npx skills add "$REPO" --skill "$skill"
 done
 ```
 
 ## Skills 说明
 
-### `writing-plans`
+### `writing-plan`
 
-把宽泛的研发需求收敛成真正可执行的计划和任务系统，而不只是简单列一份 TODO。
+创建 Spec 和可执行 Task 之间的策略层。
 
 适合这些场景：
 
-- 需要拆解里程碑、依赖关系和关键路径
+- 需要把 Spec 或需求转成技术路线
+- 需要定义阶段顺序、依赖关系、编排方式和 rollout 路径
+- 需要记录 tradeoff、假设、风险、验证方式和回滚策略
+- 需要先识别 task candidates，而不是过早创建原子任务卡
+- 需要判断缺失事实是否应该回写为 Spec Patch 建议
+
+安装：
+
+```bash
+npx skills add https://github.com/aiomni/omni-skills --skill writing-plan
+```
+
+### `writing-tasks`
+
+把 Plan 或明确研发目标下沉成真正可执行、可追踪、可 review 的任务系统。
+
+适合这些场景：
+
+- 需要创建可调度、可重试的任务卡
 - 需要明确验收标准，而不是停留在模糊目标
 - 需要建立任务卡、dashboard、inbox、执行日志和 review 节点
 - 需要把真实开发进展持续回写到任务系统中
@@ -60,7 +80,7 @@ done
 安装：
 
 ```bash
-npx skills add https://github.com/aiomni/omni-skills --skill writing-plans
+npx skills add https://github.com/aiomni/omni-skills --skill writing-tasks
 ```
 
 ### `egui-screenshot`
@@ -101,17 +121,19 @@ npx skills add https://github.com/aiomni/omni-skills --skill writing-spec
 
 ## 应该先装哪个？
 
-- 如果你的问题主要是需求拆解、执行计划、依赖管理、验收和跟踪，先装 `writing-plans`。
-- 如果你的问题主要是 `egui` 界面截图、图片导出或截图测试，先装 `egui-screenshot`。
 - 如果你的问题主要是 Spec source of truth、Snapshot、Patch、Archive 和 LLM context 治理，先装 `writing-spec`。
-- 如果你同时需要交付管理、UI 截图和 Spec governance，可以一起安装。
+- 如果你的问题主要是技术路线、阶段顺序、迁移路径、rollout 或 tradeoff，先装 `writing-plan`。
+- 如果你的问题主要是任务卡、执行日志、状态跟踪、验收和 review，先装 `writing-tasks`。
+- 如果你的问题主要是 `egui` 界面截图、图片导出或截图测试，先装 `egui-screenshot`。
+- 如果你同时需要 Spec governance、实施策略、执行跟踪和 UI 截图，可以一起安装。
 
 ## 仓库内容
 
 ```text
 principles.md
 skills/
-├── writing-plans/
+├── writing-plan/
+├── writing-tasks/
 ├── egui-screenshot/
 └── writing-spec/
 ```
