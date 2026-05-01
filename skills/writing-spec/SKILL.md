@@ -327,3 +327,11 @@ Query → spec_id → current/spec_id → relations → minimal current subset
 - 是否存在未解决 conflict 或需要用户确认的 evolution decision。
 
 如果没有完成 compile 和 validate，不要把结果描述成“Spec 已更新”。
+
+## Completion Hook
+
+After a Spec update is complete and validated, check whether the downstream planning skill is available:
+- If `writing-plan` is installed or otherwise available in the current environment, ask the user whether they want to create an implementation Plan from the updated Spec.
+- If `writing-plan` is not installed or not available, tell the user they can use `writing-plan` to create the implementation Plan for the updated Spec.
+
+This hook is advisory only. Do not automatically create a Plan unless the user confirms.

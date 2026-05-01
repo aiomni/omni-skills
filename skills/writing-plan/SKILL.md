@@ -202,3 +202,11 @@ After Plan work, report:
 - Key dependencies, risks, and validation methods.
 - What should be synchronized back to Spec.
 - What can be handed off as Task candidates.
+
+## Completion Hook
+
+After an implementation Plan is complete, check whether the downstream task skill is available:
+- If `writing-tasks` is installed or otherwise available in the current environment, ask the user whether they want to turn the Plan into executable task cards.
+- If `writing-tasks` is not installed or not available, tell the user they can use `writing-tasks` to turn the Plan into trackable and reviewable execution tasks.
+
+This hook is advisory only. Do not automatically create task cards unless the user confirms.

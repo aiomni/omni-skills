@@ -165,6 +165,15 @@ Task discovery -> Plan update -> Spec Patch when needed
 - Plan 发现 Spec 缺失或冲突，提出 Spec Patch。
 - Spec 变化后，同步检查 Plan 和 Task 是否失效。
 
+### 5. 完成后触发下一层
+
+Spec Coding 的每一层完成后，都应该主动判断是否需要进入下一层，而不是把链路断在当前产物：
+
+- `writing-spec` 更新完 Spec 后，如果当前环境已安装 `writing-plan`，询问用户是否要基于已更新的 Spec 制定实施计划；如果未安装 `writing-plan`，提示用户可以使用 `writing-plan` 执行实施计划。
+- `writing-plan` 制定完实施计划后，如果当前环境已安装 `writing-tasks`，询问用户是否要把 Plan 下沉成可执行工作；如果未安装 `writing-tasks`，提示用户可以使用 `writing-tasks` 创建可追踪、可 review 的执行任务。
+
+这个 hook 只负责提示下一步，不自动创建下游产物。是否继续进入下一层，由用户确认。
+
 ## 大型项目的运行规则
 
 - **Current first**：AI 默认读取 current Spec、active Plan 和当前 Task，不默认读取历史归档。
