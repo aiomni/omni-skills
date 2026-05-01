@@ -1,13 +1,19 @@
 ---
 name: writing-spec
-description: 设计、创建和维护 AI Coding 项目的 Spec System。用户提到 Spec、spec coding、specification、source of truth、current spec、Snapshot、Patch、Spec Evolution、Spec Graph、structured Spec、Capability Spec、Contract Spec、Guide、semantics、强语义、弱语义、Design Principles、SOLID、KISS、DRY、Separation of Concerns、Least Privilege、LLM context 污染、archive/log 分离，或者要求把项目规则沉淀成唯一有效 Spec 时，必须使用此 skill。也适用于审查现有 specs 是否存在多版本真相、narrative 文档污染、Spec/Guide 混写、Patch Log replay、过期 spec 进入 LLM context、Spec 边界设计不清等问题。
+description: Use when asked to design, create, or maintain a Spec System for an AI Coding project, including spec coding, specifications, source of truth, current specs, Snapshots, Patches, Spec Evolution, Spec Graphs, structured Specs, Capability Specs, Contract Specs, Guides, semantics, strong or weak semantics, design principles, SOLID, KISS, DRY, Separation of Concerns, Least Privilege, LLM context pollution, archive/log separation, or turning project rules into one valid Spec truth. Also use when reviewing existing specs for multiple current truths, narrative-doc pollution, mixed Spec and Guide content, Patch Log replay, stale specs entering LLM context, or unclear Spec boundaries.
 ---
 
 # Writing Spec
 
 维护一个可演进、可裁剪、single source of truth 的 Spec System。重点不是“写文档”，而是让 AI Coding 项目始终有一个 LLM 可以安全读取的 Current State。
 
-写作风格：中文为主，保留关键 technical terms，例如 `Spec`、`LLM`、`Snapshot`、`Patch`、`Compiler`、`Graph Cut`、`Contract`。表达要清楚直接，像刚从英美留学回来的工程同学在写内部 engineering rules。
+写作风格：遵循本 skill 的 Language Policy；保留关键 technical terms，例如 `Spec`、`LLM`、`Snapshot`、`Patch`、`Compiler`、`Graph Cut`、`Contract`。表达要清楚直接，像工程同学在写内部 engineering rules。
+
+## Language Policy
+
+- If the user's request is in English, respond in English and write specs, plans, task cards, reviews, and other generated artifacts in English.
+- If the user's request is in Chinese or another language, respond in that same language and write specs, plans, task cards, reviews, and other generated artifacts in that language.
+- If the user explicitly requests a language, or the surrounding context specifies a language, use that language instead of inferring the language from the request.
 
 ## 核心模型
 

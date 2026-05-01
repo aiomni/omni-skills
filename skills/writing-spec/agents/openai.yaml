@@ -1,4 +1,4 @@
 interface:
   display_name: "Writing Spec"
-  short_description: "维护 AI Coding 项目的唯一 Spec 真相"
+  short_description: "Maintain the single source of truth for an AI Coding project's Spec System"
   default_prompt: "Use $writing-spec to create a Snapshot + Patch Spec System for this AI Coding project."

@@ -7,6 +7,12 @@ description: Use when asked to add, debug, or review screenshot or snapshot supp
 
 Use this skill when the task is about capturing what egui rendered.
 
+## Language Policy
+
+- If the user's request is in English, respond in English and write specs, plans, task cards, reviews, and other generated artifacts in English.
+- If the user's request is in Chinese or another language, respond in that same language and write specs, plans, task cards, reviews, and other generated artifacts in that language.
+- If the user explicitly requests a language, or the surrounding context specifies a language, use that language instead of inferring the language from the request.
+
 ## First decide the scope
 
 Read only the reference file that matches the task:
