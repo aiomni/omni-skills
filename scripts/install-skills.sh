@@ -3,10 +3,11 @@ set -euo pipefail
 
 REPO="https://github.com/aiomni/omni-skills"
 SKILLS=(
+  writing-spec
   writing-plan
   writing-tasks
+  omni-writing-agents
   egui-screenshot
-  writing-spec
 )
 
 if ! command -v npx >/dev/null 2>&1; then
