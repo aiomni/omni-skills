@@ -17,9 +17,9 @@ Spec              Plan              Task
 
 当项目大到不能依赖聊天记录推进，而 AI 需要可恢复上下文、稳定真相、Draft 化的新功能调研、策略层规划和任务层执行状态时，使用这一组 skills。
 
-安装 Spec Coding 三件套后，可以用 `omni-writing-agents` 把这套工作流写入目标项目的 `AGENTS.md`，让后续 agent 按 Spec、Plan 和 Task 工作，而不是依赖聊天历史。
+安装 Spec Coding 三件套后，可以用 `omni-writing-agentsmd` 把这套工作流写入目标项目的 `AGENTS.md`，让后续 agent 按 Spec、Plan 和 Task 工作，而不是依赖聊天历史。
 
-详见独立文档 [`SPEC-CODING.md`](./SPEC-CODING.md)，其中说明了 `writing-spec`、`writing-plan`、`writing-tasks` 和 `omni-writing-agents` 的职责边界与使用顺序。
+详见独立文档 [`SPEC-CODING.md`](./SPEC-CODING.md)，其中说明了 `writing-spec`、`writing-plan`、`writing-tasks` 和 `omni-writing-agentsmd` 的职责边界与使用顺序。
 
 ### `egui-screenshot`
 
@@ -46,7 +46,7 @@ npx skills add https://github.com/aiomni/omni-skills --skill egui-screenshot
 - `writing-spec`
 - `writing-plan`
 - `writing-tasks`
-- `omni-writing-agents`
+- `omni-writing-agentsmd`
 - `egui-screenshot`
 
 > [!NOTE]
@@ -64,7 +64,7 @@ bash scripts/install-skills.sh
 
 ```bash
 REPO="https://github.com/aiomni/omni-skills"
-for skill in writing-spec writing-plan writing-tasks omni-writing-agents egui-screenshot; do
+for skill in writing-spec writing-plan writing-tasks omni-writing-agentsmd egui-screenshot; do
   npx skills add "$REPO" --skill "$skill"
 done
 ```
@@ -76,7 +76,7 @@ done
 | Draft 并维护 AI Coding source of truth | `writing-spec` |
 | 定义实施策略和 orchestration | `writing-plan` |
 | 创建可追踪、可 review 的执行单元 | `writing-tasks` |
-| 把 Spec Coding 规则写入项目 `AGENTS.md` | `omni-writing-agents` |
+| 把 Spec Coding 规则写入项目 `AGENTS.md` | `omni-writing-agentsmd` |
 | 为 `egui` / `eframe` 增加截图工作流 | `egui-screenshot` |
 
 ## 仓库内容
@@ -88,7 +88,7 @@ skills/
 ├── writing-spec/
 ├── writing-plan/
 ├── writing-tasks/
-├── omni-writing-agents/
+├── omni-writing-agentsmd/
 └── egui-screenshot/
 ```
 

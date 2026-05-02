@@ -6,7 +6,7 @@ SKILLS=(
   writing-spec
   writing-plan
   writing-tasks
-  omni-writing-agents
+  omni-writing-agentsmd
   egui-screenshot
 )
 

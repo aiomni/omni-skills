@@ -29,7 +29,7 @@ def resolve_agents_path(target: Path) -> Path:
 def looks_like_omni_skills_repo(project_root: Path) -> bool:
     return (
         (project_root / "SPEC-CODING.md").exists()
-        and (project_root / "skills" / "omni-writing-agents" / "SKILL.md").exists()
+        and (project_root / "skills" / "omni-writing-agentsmd" / "SKILL.md").exists()
         and (project_root / "scripts" / "install-skills.sh").exists()
     )
 

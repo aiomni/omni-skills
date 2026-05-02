@@ -1,9 +1,9 @@
 ---
-name: omni-writing-agents
+name: omni-writing-agentsmd
 description: Create or update a target project's AGENTS.md with Spec Coding operating rules after writing-spec, writing-plan, and writing-tasks are installed. Use when the user asks to install, sync, generate, patch, review, or maintain project-level AGENTS.md instructions for Spec Coding, AI coding workflows, source-of-truth Specs, Plans, Tasks, upward writeback, context hygiene, or multi-agent coordination. Do not use this to edit the omni-skills repository AGENTS.md unless that repository is explicitly the user's target project.
 ---
 
-# Omni Writing Agents
+# Omni Writing AGENTS.md
 
 Use this skill to make a user's project-level `AGENTS.md` teach future AI agents how to work with the `writing-spec`, `writing-plan`, and `writing-tasks` skills as a coherent Spec Coding workflow.
 

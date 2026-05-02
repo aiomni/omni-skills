@@ -1,4 +1,0 @@
-interface:
-  display_name: "Omni Writing Agents"
-  short_description: "Sync Spec Coding rules into project AGENTS.md"
-  default_prompt: "Use $omni-writing-agents to add Spec Coding operating rules to this project's AGENTS.md."

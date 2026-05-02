@@ -17,9 +17,9 @@ Spec              Plan              Task
 
 Use it when a project is too large to rely on chat history alone, and AI needs recoverable context, stable truth, draft-based feature discovery, strategy-level planning, and task-level execution state.
 
-Use `omni-writing-agents` after installing the Spec Coding trio to write the workflow into the target project's `AGENTS.md`, so future agents know to work from Specs, Plans, and Tasks instead of chat history.
+Use `omni-writing-agentsmd` after installing the Spec Coding trio to write the workflow into the target project's `AGENTS.md`, so future agents know to work from Specs, Plans, and Tasks instead of chat history.
 
-See [`SPEC-CODING.md`](./SPEC-CODING.md) for the dedicated Spec Coding guide, including the `writing-spec`, `writing-plan`, `writing-tasks`, and `omni-writing-agents` skills.
+See [`SPEC-CODING.md`](./SPEC-CODING.md) for the dedicated Spec Coding guide, including the `writing-spec`, `writing-plan`, `writing-tasks`, and `omni-writing-agentsmd` skills.
 
 ### `egui-screenshot`
 
@@ -46,7 +46,7 @@ Available skill names:
 - `writing-spec`
 - `writing-plan`
 - `writing-tasks`
-- `omni-writing-agents`
+- `omni-writing-agentsmd`
 - `egui-screenshot`
 
 > [!NOTE]
@@ -64,7 +64,7 @@ If you prefer a one-liner instead of the script:
 
 ```bash
 REPO="https://github.com/aiomni/omni-skills"
-for skill in writing-spec writing-plan writing-tasks omni-writing-agents egui-screenshot; do
+for skill in writing-spec writing-plan writing-tasks omni-writing-agentsmd egui-screenshot; do
   npx skills add "$REPO" --skill "$skill"
 done
 ```
@@ -76,7 +76,7 @@ done
 | Draft and maintain AI Coding source of truth | `writing-spec` |
 | Define implementation strategy and orchestration | `writing-plan` |
 | Create tracked, reviewable execution units | `writing-tasks` |
-| Write Spec Coding rules into project `AGENTS.md` | `omni-writing-agents` |
+| Write Spec Coding rules into project `AGENTS.md` | `omni-writing-agentsmd` |
 | Add screenshot workflows for `egui` / `eframe` | `egui-screenshot` |
 
 ## Repository Contents
@@ -88,7 +88,7 @@ skills/
 ├── writing-spec/
 ├── writing-plan/
 ├── writing-tasks/
-├── omni-writing-agents/
+├── omni-writing-agentsmd/
 └── egui-screenshot/
 ```
 
